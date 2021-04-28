@@ -1,84 +1,231 @@
 
-.highlight {
-  background-color: #efefef;
+div.highlight {
   padding: 7px 7px 7px 10px;
-  border: 1px solid #ddd;
-  -moz-box-shadow: 3px 3px rgba(0,0,0,0.1);
-  -webkit-box-shadow: 3px 3px rgba(0,0,0,0.1);
-  box-shadow: 3px 3px rgba(0,0,0,0.1);
-  margin: 20px 0 20px 0;
+  
+  border-radius: 5px;
+
+  -moz-box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  -webkit-box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
   overflow: scroll;
 }
 
-code {
-  font-family:'Bitstream Vera Sans Mono','Courier', monospace;
+// Override Syntax Highlighting In Minima With the Dracula Theme: https://draculatheme.com/
+// If you wish to override any of this CSS, do so in _sass/minima/custom-styles.css
+ 
+$dt-gray-dark: #282a36;  // Background
+$dt-code-cell-background: #323443;
+$dt-gray: #44475a;       // Current Line & Selection
+$dt-gray-light: #f8f8f2; // Foreground
+$dt-blue: #6272a4;       // Comment
+$dt-cyan: #8be9fd;
+$dt-green: #50fa7b;
+$dt-orange: #ffb86c;
+$dt-pink: #ff79c6;
+$dt-purple: #bd93f9;
+$dt-red: #ff5555;
+$dt-yellow: #f1fa8c;
+$dt-green-light: rgb(172, 229, 145);
+
+.language-python + .language-plaintext {
+    border-left: 1px solid grey;
+    margin-left: 1rem !important;
 }
 
-.highlight .c { color: #586E75 } /* Comment */
-.highlight .err { color: #93A1A1 } /* Error */
-.highlight .g { color: #93A1A1 } /* Generic */
-.highlight .k { color: #859900 } /* Keyword */
-.highlight .l { color: #93A1A1 } /* Literal */
-.highlight .n { color: #93A1A1 } /* Name */
-.highlight .o { color: #859900 } /* Operator */
-.highlight .x { color: #CB4B16 } /* Other */
-.highlight .p { color: #93A1A1 } /* Punctuation */
-.highlight .cm { color: #586E75 } /* Comment.Multiline */
-.highlight .cp { color: #859900 } /* Comment.Preproc */
-.highlight .c1 { color: #586E75 } /* Comment.Single */
-.highlight .cs { color: #859900 } /* Comment.Special */
-.highlight .gd { color: #2AA198 } /* Generic.Deleted */
-.highlight .ge { color: #93A1A1; font-style: italic } /* Generic.Emph */
-.highlight .gr { color: #DC322F } /* Generic.Error */
-.highlight .gh { color: #CB4B16 } /* Generic.Heading */
-.highlight .gi { color: #859900 } /* Generic.Inserted */
-.highlight .go { color: #93A1A1 } /* Generic.Output */
-.highlight .gp { color: #93A1A1 } /* Generic.Prompt */
-.highlight .gs { color: #93A1A1; font-weight: bold } /* Generic.Strong */
-.highlight .gu { color: #CB4B16 } /* Generic.Subheading */
-.highlight .gt { color: #93A1A1 } /* Generic.Traceback */
-.highlight .kc { color: #CB4B16 } /* Keyword.Constant */
-.highlight .kd { color: #268BD2 } /* Keyword.Declaration */
-.highlight .kn { color: #859900 } /* Keyword.Namespace */
-.highlight .kp { color: #859900 } /* Keyword.Pseudo */
-.highlight .kr { color: #268BD2 } /* Keyword.Reserved */
-.highlight .kt { color: #DC322F } /* Keyword.Type */
-.highlight .ld { color: #93A1A1 } /* Literal.Date */
-.highlight .m { color: #2AA198 } /* Literal.Number */
-.highlight .s { color: #2AA198 } /* Literal.String */
-.highlight .na { color: #93A1A1 } /* Name.Attribute */
-.highlight .nb { color: #B58900 } /* Name.Builtin */
-.highlight .nc { color: #268BD2 } /* Name.Class */
-.highlight .no { color: #CB4B16 } /* Name.Constant */
-.highlight .nd { color: #268BD2 } /* Name.Decorator */
-.highlight .ni { color: #CB4B16 } /* Name.Entity */
-.highlight .ne { color: #CB4B16 } /* Name.Exception */
-.highlight .nf { color: #268BD2 } /* Name.Function */
-.highlight .nl { color: #93A1A1 } /* Name.Label */
-.highlight .nn { color: #93A1A1 } /* Name.Namespace */
-.highlight .nx { color: #555 } /* Name.Other */
-.highlight .py { color: #93A1A1 } /* Name.Property */
-.highlight .nt { color: #268BD2 } /* Name.Tag */
-.highlight .nv { color: #268BD2 } /* Name.Variable */
-.highlight .ow { color: #859900 } /* Operator.Word */
-.highlight .w { color: #93A1A1 } /* Text.Whitespace */
-.highlight .mf { color: #2AA198 } /* Literal.Number.Float */
-.highlight .mh { color: #2AA198 } /* Literal.Number.Hex */
-.highlight .mi { color: #2AA198 } /* Literal.Number.Integer */
-.highlight .mo { color: #2AA198 } /* Literal.Number.Oct */
-.highlight .sb { color: #586E75 } /* Literal.String.Backtick */
-.highlight .sc { color: #2AA198 } /* Literal.String.Char */
-.highlight .sd { color: #93A1A1 } /* Literal.String.Doc */
-.highlight .s2 { color: #2AA198 } /* Literal.String.Double */
-.highlight .se { color: #CB4B16 } /* Literal.String.Escape */
-.highlight .sh { color: #93A1A1 } /* Literal.String.Heredoc */
-.highlight .si { color: #2AA198 } /* Literal.String.Interpol */
-.highlight .sx { color: #2AA198 } /* Literal.String.Other */
-.highlight .sr { color: #DC322F } /* Literal.String.Regex */
-.highlight .s1 { color: #2AA198 } /* Literal.String.Single */
-.highlight .ss { color: #2AA198 } /* Literal.String.Symbol */
-.highlight .bp { color: #268BD2 } /* Name.Builtin.Pseudo */
-.highlight .vc { color: #268BD2 } /* Name.Variable.Class */
-.highlight .vg { color: #268BD2 } /* Name.Variable.Global */
-.highlight .vi { color: #268BD2 } /* Name.Variable.Instance */
-.highlight .il { color: #2AA198 } /* Literal.Number.Integer.Long */
+// ensure dark background for code in markdown
+[class^="language-"]:not(.language-plaintext) pre,
+[class^="language-"]:not(.language-plaintext) code {
+    background-color: $dt-code-cell-background !important;
+    color: $dt-gray-light;
+}
+
+.language-python + .language-plaintext code { background-color: white !important; }
+.language-python + .language-plaintext pre  { background-color: white !important; }
+
+// for Jupyter Notebook HTML Code Cells modified from https://www.fast.ai/public/css/hyde.css
+
+.input_area pre, .input_area div {
+    margin-bottom:1.0rem !important;
+    margin-top:1.5rem !important;
+    padding-bottom:0 !important;
+    padding-top:0 !important;
+    background: #323443 !important;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    font-family: Menlo, Monaco, Consolas, "Lucida Console", Roboto, Ubuntu, monospace;
+    border-radius: 5px;
+    font-size: 100%;
+}
+.output_area pre, .output_area div {
+    margin-bottom:1rem !important;
+    margin-top:0rem !important;
+    padding-bottom:0 !important;
+    padding-top:0 !important;
+}
+.input_area pre {
+    border-left: 1px solid lightcoral;
+}
+.output_area pre {
+    border-left: 1px solid grey;
+    margin-left: 1rem !important;
+    font-size: 12px;
+}
+
+.code_cell table { width: auto; }
+
+/* Dracula Theme v1.2.5
+ *
+ * https://github.com/zenorocha/dracula-theme
+ *
+ * Copyright 2016, All rights reserved
+ *
+ * Code licensed under the MIT license
+ *
+ */
+
+.highlight {
+    background: $dt-code-cell-background !important;
+    color: $dt-gray-light !important;
+    pre, code {
+     background: $dt-code-cell-background;
+     color: $dt-gray-light;
+    //  font-size: 110%;
+    }
+   
+    .hll,
+    .s,
+    .sa,
+    .sb,
+    .sc,
+    .dl,
+    .sd,
+    .s2,
+    .se,
+    .sh,
+    .si,
+    .sx,
+    .sr,
+    .s1,
+    .ss {
+         color:rgb(231, 153, 122);
+    }
+  
+    .go {
+      color: $dt-gray;
+    }
+  
+    .err,
+    .g,
+    .l,
+    .n,
+    .x,
+    .ge,
+    .gr,
+    .gh,
+    .gi,
+    .gp,
+    .gs,
+    .gu,
+    .gt,
+    .ld,
+    .no,
+    .nd,
+    .pi,
+    .ni,
+    .ne,
+    .nn,
+    .nx,
+    .py,
+    .w,
+    .bp {
+      color: $dt-gray-light;
+      background-color: $dt-code-cell-background !important;
+    }
+ 
+    .p {
+        //  font-weight: bold;
+         color: rgb(102, 217, 239);
+  }
+  
+    .ge {
+      text-decoration: underline;
+    }
+  
+    .bp {
+      font-style: italic;
+    }
+  
+    .c,
+    .ch,
+    .cm,
+    .cpf,
+    .cs {
+      color: $dt-blue;
+    }
+
+    .c1 {
+      color: gray;
+      font-style: italic;
+    }
+  
+    .kd,
+    .kt,
+    .nb,
+    .nl,
+    .nv,
+    .vc,
+    .vg,
+    .vi,
+    .vm {
+      color: $dt-cyan;
+    }
+  
+    .kd,
+    .nb,
+    .nl,
+    .nv,
+    .vc,
+    .vg,
+    .vi,
+    .vm {
+      font-style: italic;
+    }
+  
+    .fm,
+    .na,
+    .nc,
+    .nf
+     {
+      color: $dt-green-light;
+    }
+  
+    .k,
+    .o,
+    .cp,
+    .kc,
+    .kn,
+    .kp,
+    .kr,
+    .nt,
+    .ow {
+      color: $dt-pink;
+    }
+ 
+    .kc {
+         color: $dt-green-light;   
+    }
+  
+    .m,
+    .mb,
+    .mf,
+    .mh,
+    .mi,
+    .mo,
+    .il {
+      color: $dt-purple;
+    }
+  
+    .gd {
+      color: $dt-red;
+    }
+}
