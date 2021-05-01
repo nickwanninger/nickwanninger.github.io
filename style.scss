@@ -22,7 +22,7 @@ body {
   // font: 1px/1.4 $helvetica;
   font-size: 14px;
   font-family: -apple-system,BlinkMacSystemFont,"avenir next",avenir,"helvetica neue",helvetica,ubuntu,roboto,noto,"segoe ui",arial,sans-serif;
-  color: $darkGray;
+  color: #333;
 }
 
 .container {
@@ -34,7 +34,6 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
   font-family: $helveticaNeue;
-  color: $darkerGray;
   font-weight: bold;
 
   line-height: 1.7;
@@ -63,7 +62,6 @@ h3 {
 
 h4 {
   font-size: 18px;
-  color: $gray;
 }
 
 p {
@@ -79,7 +77,6 @@ p {
 }
 
 a {
-  color: $blue;
   text-decoration: none;
 	cursor: pointer;
   &:hover, &:active {
