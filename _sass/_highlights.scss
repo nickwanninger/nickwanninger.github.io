@@ -1,13 +1,15 @@
 
 div.highlight {
   padding: 7px 7px 7px 10px;
-  
-  border-radius: 5px;
-
+  border-radius: 15px;
   -moz-box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
   -webkit-box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
   box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
   overflow: scroll;
+}
+
+.highlighter-rouge {
+  padding: 0px 20px;
 }
 
 // Override Syntax Highlighting In Minima With the Dracula Theme: https://draculatheme.com/

@@ -18,10 +18,10 @@ html {
 }
 
 body {
-	background: $white;
+	background: #f2f3f5;
   // font: 1px/1.4 $helvetica;
   font-size: 14px;
-  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-family: -apple-system,BlinkMacSystemFont,"avenir next",avenir,"helvetica neue",helvetica,ubuntu,roboto,noto,"segoe ui",arial,sans-serif;
   color: $darkGray;
 }
 
@@ -67,7 +67,15 @@ h4 {
 }
 
 p {
-  margin: 15px 0;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-size: 1.25rem;
+  line-height: 1.5;
+  @media screen and (max-width: 600px) {
+    font-size: 1rem;
+  }
 }
 
 a {
@@ -156,14 +164,14 @@ img {
   margin-bottom: 2rem;
 }
 
-.masthead {
-  padding: 20px 0;
-  border-bottom: 1px solid $lightGray;
+// .masthead {
+//   padding: 20px 0;
+//   border-bottom: 1px solid $lightGray;
 
-  @include mobile {
-    text-align: center;
-  }
-}
+//   @include mobile {
+//     text-align: center;
+//   }
+// }
 
 .site-avatar {
   float: left;
@@ -196,8 +204,8 @@ img {
   margin: 0;
   color: $darkGray;
   cursor: pointer;
-  font-family: $helveticaNeue;
-  font-weight: 300;
+  // font-family: $helveticaNeue;
+  font-weight: 900;
   font-size: 28px;
   letter-spacing: 1px;
 }
@@ -215,7 +223,7 @@ img {
 nav {
   float: right;
   margin-top: 23px; // @TODO: Vertically middle align
-  font-family: $helveticaNeue;
+  // font-family: $helveticaNeue;
   font-size: 18px;
 
   @include mobile {
@@ -244,13 +252,18 @@ nav {
 //
 
 .posts > .post {
-  padding-bottom: 2em;
-  border-bottom: 1px solid $lightGray;
-}
+  display: block;
+  margin-top: 10px;
+  padding: 10px 20px;
+  border-radius: 15px;
+  transition: box-shadow 0.1s ease, background-color 0.1s ease;
 
-.posts > .post:last-child {
-  padding-bottom: 1em;
-  border-bottom: none;
+  &:hover {
+    background-color: #ffffff;
+    -moz-box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    -webkit-box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  }
 }
 
 
@@ -319,4 +332,57 @@ p, label, span, h1 a, h2 a, h3 a, h4 a, h5 a {
 article.post {
   line-height: 1.42857143;
   color: #24292e;
+}
+
+.post img {
+  margin: 0px 20px;
+  display: block;
+  width: calc(100% - 40px);
+  border-radius: 15px;
+  -moz-box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  -webkit-box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+header {
+  display: flex;
+  width: 100%;
+  max-width: 1200px;
+  padding: 20px;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid #aaa;
+}
+
+.flex {
+  display: flex;
+  flex: 1;
+}
+
+.title-block {
+  max-width: 900px;
+  @media screen and (min-width: 600px) {
+      padding-bottom: 5rem;
+  }
+
+
+
+  padding-left: 1rem;
+  padding-right: 1rem;
+
+  h1 {
+    font-size: 5rem;
+    line-height: 1;
+    font-weight: 900;
+    @media screen and (max-width: 600px) {
+      font-size: 3rem;
+    }
+  }
 }
