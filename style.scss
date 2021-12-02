@@ -18,7 +18,7 @@ html {
 }
 
 body {
-	background: #f2f3f5;
+	background: #ffffff;
   // font: 1px/1.4 $helvetica;
   font-size: 14px;
   font-family: -apple-system,BlinkMacSystemFont,"avenir next",avenir,"helvetica neue",helvetica,ubuntu,roboto,noto,"segoe ui",arial,sans-serif;
@@ -382,4 +382,58 @@ header {
       font-size: 3rem;
     }
   }
+}
+
+
+.home-row {
+	width: 100%;
+	max-width: 900px;
+	margin-top: 30px;
+	display: flex;
+	flex-direction: row;
+	padding: 10px;
+
+	.contact-info {
+		font-weight: bold;
+		line-height: 1.5rem;
+	}
+
+	.home-col {
+		flex: 1;
+		display: flex;
+		flex-direction: column;
+	}
+
+	.home-info {
+		max-width: 260px;
+	}
+
+
+	@media screen and (max-width: 700px) {
+		flex-direction: column;
+		.home-info {
+			max-width: 100%;
+		}
+	}
+
+
+	@media screen and (min-width: 700px) {
+		.home-info {
+			justify-content: center;
+			align-items: center;
+			text-align: center;
+
+			.site-avatar {
+				width: auto;
+				height: auto;
+				img {
+					width: 200px;
+				}
+			}
+		}
+
+		.home-content {
+			padding-left: 20px;
+		}
+	}
 }

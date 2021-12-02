@@ -34,19 +34,50 @@
 
 		
     <main>
-      <header class="masthead clearfix">
-        <a href="{{ site.baseurl }}/" class="site-avatar"><img src="{{ site.avatar }}" /></a>
 
-        <div class="site-info">
+			<div class="home-row">
+				<div class="home-col home-info">
+
+        	<a href="{{ site.baseurl }}/" class="site-avatar"><img src="{{ site.avatar }}" /></a>
           <h1 class="site-name"><a href="{{ site.baseurl }}/">{{ site.name }}</a></h1>
           <p class="site-description">{{ site.description }}</p>
-        </div>
 
-        <div class="flex"></div>
-      </header>
+					<span class="contact-info">ncw (at) u.northwestern.edu</span>
+					<span class="contact-info"> Mudd Library Room 3301 </span>
 
-      {{ content }}
 
+				</div>
+				<div class="home-col home-content">
+
+						<article class="post">
+							<div class="entry">
+								{{ content }}
+							</div>
+						</article>
+
+				</div>
+			</div>
+
+
+
+			<div class="container">
+				<div class="posts">
+					{% for post in site.posts %}
+					
+						<a href="{{ site.baseurl }}{{ post.url }}" class="post posts-entry">
+				
+							<h1 style="margin-bottom: 0px;">{{ post.title }}</h1>
+				
+							<div class="date">
+								Written on {{ post.date | date: "%B %e, %Y" }}
+							</div>
+							<div class="entry">
+								{{ post.excerpt }}
+							</div>
+					</a>
+					{% endfor %}
+				</div>
+			</div>
 
       
     </main>
