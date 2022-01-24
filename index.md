@@ -13,4 +13,4 @@ where I prototype many such extensions.
 
 ## Publications
 
-- Nothing yet! Stay tuned! :^)
+- N. Wanninger, J. Bowden, K. Hale, *Isolating Functions at the Hardware Limit with Virtines* (EuroSys'22) [pdf](/papers/eurosys22.pdf)
