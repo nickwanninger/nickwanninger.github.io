@@ -12,6 +12,6 @@ programming models by adding support at the lowest levels of the operating syste
 kernel. I'm working on an operating system, [Chariot](https://github.com/ChariotOS/chariot)
 where I prototype many such extensions.
 
-## Publications
 
-- N. Wanninger, J. Bowden, K. Hale, *Isolating Functions at the Hardware Limit with Virtines* (EuroSys'22) [pdf](/papers/eurosys22.pdf){:target="_blank" rel="noopener"}
+## Publications
+- *N. Wanninger*, J. Bowden, K. Hale, *Isolating Functions at the Hardware Limit with Virtines* (EuroSys'22) [pdf](/papers/eurosys22.pdf){:target="_blank" rel="noopener"}
