@@ -14,4 +14,5 @@ where I prototype many such extensions.
 
 
 ## Publications
+- P. Dinda, **N. Wanninger**, Jiacheng Ma, Alex Bernat, Charles Bernat, Souradip Ghosh, Christopher Kraemer, Yehya Elmasry, *FPVM: Towards a Floating Point Virtual Machine* (HPDC'22) (to appear)
 - **N. Wanninger**, J. Bowden, K. Shetty, A. Garg, K. Hale, *Isolating Functions at the Hardware Limit with Virtines* (EuroSys'22) [pdf](/papers/eurosys22.pdf){:target="_blank" rel="noopener"}
